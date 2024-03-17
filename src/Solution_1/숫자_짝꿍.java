@@ -1,7 +1,5 @@
 package Solution_1;
 
-import java.util.Arrays;
-
 public class 숫자_짝꿍 {
     public static void main(String[] args){
         숫자_짝꿍 num = new 숫자_짝꿍();
