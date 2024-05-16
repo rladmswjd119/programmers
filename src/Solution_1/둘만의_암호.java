@@ -1,7 +1,5 @@
 package Solution_1;
 
-import java.util.Arrays;
-
 public class 둘만의_암호 {
     public static void main(String[] args) {
         둘만의_암호 password = new 둘만의_암호();
@@ -10,7 +8,6 @@ public class 둘만의_암호 {
 
     public String solution(String s, String skip, int index) {
         StringBuilder answer = new StringBuilder();
-
         for(char c : s.toCharArray()) {
             char tmp = c;
             int idx = 0;
@@ -22,8 +19,6 @@ public class 둘만의_암호 {
             }
             answer.append(tmp);
         }
-
-
         return answer.toString();
     }
 }

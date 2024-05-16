@@ -10,19 +10,20 @@ public class 햄버거_만들기 {
     }
     public int solution(int[] ingredient) {
         int answer = 0;
-        Stack<Integer> stk = new Stack<>();
-        for(int in : ingredient) {
-            stk.push(in);
-            if(stk.size() >= 4
-            && stk.get(stk.size() - 4) == 1
-            && stk.get(stk.size() - 3) == 2
-            && stk.get(stk.size() - 2) == 3
-            && stk.get(stk.size() - 1) == 1){
+        Stack<Integer> stack = new Stack<>();
+        for(int material : ingredient){
+            stack.push(material);
+            if(stack.size() >= 4
+                    && stack.get(stack.size() - 1) == 1
+                    && stack.get(stack.size() - 2) == 3
+                    && stack.get(stack.size() - 3) == 2
+                    && stack.get(stack.size() - 4) == 1){
+
                 answer++;
-                stk.pop();
-                stk.pop();
-                stk.pop();
-                stk.pop();
+                stack.pop();
+                stack.pop();
+                stack.pop();
+                stack.pop();
             }
         }
         return answer;
